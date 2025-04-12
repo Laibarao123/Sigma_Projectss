@@ -1,0 +1,495 @@
+!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOOD DELIVERY SYSTEM</title>
+    <title>background Image</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sofia:wght@300;400;700&display=swap">
+    <style>
+        /* CSS Reset */
+        body {
+            color: white;
+            margin: 0;
+            padding: 0;
+            font-family: 'Sofia', sans-serif;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("C:\Users\dell\Desktop\LME\1715829900889 (1).jpg") no-repeat center center fixed;
+            background-image: url(Kababjees-Fried-Chicken.jpg);
+
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 90px;
+            position: fixed;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .left {
+            display: flex;
+            align-items: center;
+        }
+
+        .left img {
+            width: 80px;
+            height: auto;
+            margin-right: 15px;
+            transition: transform 0.3s;
+        }
+
+        .left img:hover {
+            transform: scale(1.1);
+        }
+
+        .left div {
+            font-size: 32px;
+            font-weight: italic;
+            color: rgb(231, 240, 231);
+        }
+
+        .navbar {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar li a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            font-size: 16px;
+            transition: color 0.3s, background-color 0.3s;
+            border-radius: 10px;
+        }
+
+        .navbar li a:hover,
+        .navbar li a.active {
+            color: rgb(233, 227, 227);
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .btn {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border: 2px solid gray;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s, transform 0.3s;
+            display: inline-table;
+            width: auto;
+        }
+
+        .btn:hover {
+            background-color: rgb(63, 138, 125);
+            transform: scale(1.05);
+        }
+
+        .container {
+            margin: 100px auto;
+            padding: 30px;
+            width: 90%;
+            max-width: 700px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 500px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .container h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: rgb(223, 215, 216);
+        }
+
+        .menu-section {
+            margin: 50px auto;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .menu-section h2 {
+            font-size: 24px;
+            color: rgb(223, 215, 216);
+            margin-bottom: 20px;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .menu-item label {
+            font-size: 16px;
+            color: #fff;
+        }
+
+        .menu-item input {
+            width: 60px;
+            padding: 8px;
+            border: 2px solid #333;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .menu-item .btn {
+            margin-left: 10px;
+            font-size: 14px;
+            padding: 8px 12px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px;
+            }
+
+            .navbar {
+                flex-direction: column;
+            }
+
+            .navbar li {
+                margin-bottom: 10px;
+            }
+
+            .container,
+            .menu-section {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="left">
+            <img src="C:\Users\dell\Desktop\LME\images.png" alt="KABAABJEES">
+            <div>Online Delivery System</div>
+        </div>
+        <nav class="mid">
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Food Centre</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="right">
+            <button class="btn">Call Us Now</button>
+            <button class="btn">Email Us</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>KABAABJEES FRIED CHICKEN</h1>
+        <form action="no_action.php">
+            <div class="form group">
+                <input type="text" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form group">
+                <input type="email" name="email" placeholder="Enter your City" required>
+            </div>
+            <div class="form group">
+                <input type="email" name="email" placeholder="Enter your Country" required>
+            </div>
+            <div class="form group">
+                <input type="text" name="locality" placeholder="Enter your Locality" required>
+            </div>
+            <div class="form group">
+                <input type="tel" name="contact" placeholder="Enter your Contact Number" required>
+            </div>
+            <div class="form group">
+                <input type="email" name="email" placeholder="Enter Another Contact Number" required>
+            </div>
+            <div class="form group">
+                <input type="email" name="email" placeholder="Enter your Email" required>
+            </div>
+            <button class="btn" type="submit">Back</button>
+            <button class="btn" type="submit">Preview Info</button>
+            <button class="btn" type="submit">Submit</button>
+        </form>
+    </div>
+    <h2> SECECT FROM THE  MENU !!!!!!!!!!!!!</h2>
+    <div class="menu-section">
+        <h2>DHAMAKA  DEALS</h2>
+        <div class="left">
+            <img src="C:\Users\dell\Desktop\LME\1732694472-467569239_576162548149569_4846512047185791446_n.webp" alt="RS 990">
+            <div></div>
+        </div>
+        <div class="menu-item">
+            <label>3 Spicy Zinger Burgers -RS 990:</label>
+            <input type="number" min="0" placeholder="Qty">
+            <button class="btn">Add to Cart</button>
+        </div>
+        <div class="left">
+            <img src="C:\Users\dell\Desktop\LME\download.jpg" alt="RS 990">
+            <div></div>
+        </div>
+        <div class="menu-item">
+            <label>3 Zinger Burgers - RS 900:</label>
+            <input type="number" min="0" placeholder="Qty">
+            <button class="btn">Add to Cart</button>
+        </div>
+
+        <h2> WING  IT </h2>
+        <div class="left">
+            <img src="C:\Users\dell\Desktop\LME\1713423114-plain.webp" alt="">
+            <div></div>
+        </div>
+        <div class="menu-item">
+            <label>Plain Crispy Wings (8 pcs) - RS 640:</label>
+            <input type="number" min="0" placeholder="Qty">
+            <button class="btn">Add to Cart</button>
+        </div>
+        <div class="left">
+            <img src="C:\Users\dell\Desktop\LME\1713423161-salsa.webp" alt="">
+            <div></div>
+        </div>
+    
+        <div class="menu-item">
+            <label>Sizzling Salsa Wings (8 pcs) - RS 640:</label>
+            <input type="number" min="0" placeholder="Qty">
+            <button class="btn">Add to Cart</button>
+        </div>
+        <div class="left">
+            <img src="C:\Users\dell\Desktop\LME\1713423395-buffalo.webp" alt="">
+            <div></div>
+        </div>
+        <div class="menu-item">
+            <label>Buffalo Spicy Wings (8 pcs) - RS 640:</label>
+            <input type="number" min="0" placeholder="Qty">
+            <button class="btn">Add to Cart</button>
+        </div>
+        <div class="left">
+            <img src="C:\Users\dell\Desktop\LME\1713423278-thai.webp" alt="">
+            <div></div>
+        </div>
+        <div class="menu-item">
+            <label>Thai Sweet Chili Wings (8 pcs) - RS 640:</label>
+            <input type="number" min="0" placeholder="Qty">
+            <button class="btn">Add to Cart</button>
+        </div>
+
+        <h2>NEW ARRIVALS</h2>
+        <div class="left">
+            <img src="C:\Users\dell\Desktop\LME\1736842735-472274386_1170960214590907_8986023531191512975_n.webp" alt="">
+            <div></div>
+        </div>
+        <div class="menu-item">
+            <label>Rice n Spice - RS 390:</label>
+            <input type="number" min="0" placeholder="Qty">
+            <button class="btn">Add to Cart</button>
+        </div>
+        <div class="left">
+            <img src="C:\Users\dell\Desktop\LME\1723764348-WhatsApp202024-08-15203.webp" alt="">
+            <div></div>
+        </div>
+        <div class="menu-item">
+            <label>Jalapeno Wrap - RS 450:</label>
+            <input type="number" min="0" placeholder="Qty">
+            <button class="btn">Add to Cart</button>
+        </div>
+        
+        <div class="left">
+            <img src="C:\Users\dell\Desktop\LME\1729931904-pasta.webp" alt="">
+            <div></div>
+        </div>
+        <div class="menu-item">
+            <label>Crunchy Chicken Pasta - RS 889:</label>
+            <input type="number" min="0" placeholder="Qty">
+            <button class="btn">Add to Cart</button>
+        </div>
+        <div class="left">
+            <img src="C:\Users\dell\Desktop\LME\1729947285-Lemon-Wings.webp" alt="">
+            <div></div>
+        </div>
+        <div class="menu-item">
+            <label>Flavor Explosion Zesty Lemon  Wings - RS 699:</label>
+            <input type="number" min="0" placeholder="Qty">
+            <button class="btn">Add to Cart</button>
+        </div>
+
+        <h2> MEAL DEALS  </h2>
+        <div class="left">
+            <img src="C:\Users\dell\Desktop\LME\1730537201-2-pc-MEal-Changes-1.webp" alt="">
+            <div></div>
+        </div>
+        <div class="menu-item">
+            <label>2 Piece Meal Deal - RS 710:</label>
+            <input type="number" min="0" placeholder="Qty">
+            <button class="btn">Add to Cart</button>
+        </div>
+        <div class="left">
+            <img src="C:\Users\dell\Desktop\LME\1730537398-Ultimate-feast-box-Changes-1.webp" alt="">
+            <div></div>
+        </div>
+        <div class="menu-item">
+            <label>Ultimate Feast Box - RS 1350:</label>
+            <input type="number" min="0" placeholder="Qty">
+            <button class="btn">Add to Cart</button>
+        </div>
+        <div class="left">
+            <img src="C:\Users\dell\Desktop\LME\1730536675-Flavour-Craver-Changes-1.webp" alt="">
+            <div></div>
+        </div>
+        <div class="menu-item">
+            <label>Flavor Cravor - RS 1050:</label>
+            <input type="number" min="0" placeholder="Qty">
+            <button class="btn">Add to Cart</button>
+        </div>
+        <div class="left">
+            <img src="C:\Users\dell\Desktop\LME\1730536500-Ultimate-crunch-feast-Changes-1.webp" alt="">
+            <div></div>
+        </div>
+        <div class="menu-item">
+            <label>Ultimate Crunch Feast - RS 1560:</label>
+            <input type="number" min="0" placeholder="Qty">
+            <button class="btn">Add to Cart</button>
+        </div>
+
+        <h2> EXCLUSIVE FAMILY DEALS</h2>
+        <div class="left">
+            <img src="C:\Users\dell\Desktop\LME\1702037315-_0007_mega-snack-box.webp" alt="">
+            <div></div>
+        </div>
+        <div class="menu-item">
+            <label>Mega Snack Box - RS 2050:</label>
+            <input type="number" min="0" placeholder="Qty">
+            <button class="btn">Add to Cart</button>
+        </div>
+        <div class="left">
+            <img src="C:\Users\dell\Desktop\LME\1723641048-1.webp" alt="">
+            <div></div>
+        </div>
+        <div class="menu-item">
+            <label>Family Combo 1 - RS 2190:</label>
+            <input type="number" min="0" placeholder="Qty">
+            <button class="btn">Add to Cart</button>
+        </div>
+        <div class="left">
+            <img src="C:\Users\dell\Desktop\LME\1723641033-1.webp" alt="">
+            <div></div>
+        </div>
+        <div class="menu-item">
+            <label>Family Combo 2 - RS 2390:</label>
+            <input type="number" min="0" placeholder="Qty">
+            <button class="btn">Add to Cart</button>
+        </div>
+        <div class="left">
+            <img src="C:\Users\dell\Desktop\LME\1723641033-1.webp" alt="">
+            <div></div>
+        </div>
+        <div class="menu-item">
+            <label>Family Combo 3 - RS 2590:</label>
+            <input type="number" min="0" placeholder="Qty">
+            <button class="btn">Add to Cart</button>
+        </div>
+
+        <h2>BURGER SPECIAL DEALS</h2>
+        <div class="left">
+            <img src="C:\Users\dell\Desktop\LME\1736415879-472253642_1121207210013115_3887399455819048087_n.webp" alt="">
+            <div></div>
+        </div>
+        <div class="menu-item">
+            <label>Spicy Zinger Burger - RS 650:</label>
+            <input type="number" min="0" placeholder="Qty">
+            <button class="btn">Add to Cart</button>
+        </div>
+        <div class="left">
+            <img src="C:\Users\dell\Desktop\LME\1735910339-472105835_885179473504093_1407035160029732570_n.webp" alt="886">
+            <div></div>
+        </div>
+        <div class="menu-item">
+            <label>Smokin Pepperoni Stack - RS 690:</label>
+            <input type="number" min="0" placeholder="Qty">
+            <button class="btn">Add to Cart</button>
+        </div>
+        <div class="left">
+            <img src="C:\Users\dell\Desktop\LME\1718004987-_JK_6473 (1).webp" alt="">
+            <div></div>
+        </div>
+        <div class="menu-item">
+            <label>Chicken Chipotle Burger - RS 570:</label>
+            <input type="number" min="0" placeholder="Qty">
+            <button class="btn">Add to Cart</button>
+        </div>
+    
+        <div class="left">
+            <img src="C:\Users\dell\Desktop\LME\1730537114-Majesty-with-fries-&-drink-Changes-1.webp" alt="">
+            <div></div>
+        </div>
+        <div class="menu-item">
+            <label>Majesty Combo - RS 1050:</label>
+            <input type="number" min="0" placeholder="Qty">
+            <button class="btn">Add to Cart</button>
+        </div>
+
+        <h2>BEVERAGES</h2>
+        <div class="left">
+            <img src="C:\Users\dell\Desktop\LME\1730537911-cola-drink.webp" alt="">
+            <div></div>
+        </div>
+        <div class="menu-item">
+            <label>Kababjees Cola Can - RS 150:</label>
+            <input type="number" min="0" placeholder="Qty">
+            <button class="btn">Add to Cart</button>
+        </div>
+        <div class="left">
+            <img src="C:\Users\dell\Desktop\LME\1730537883-lemon-drink.webp" alt="KABAABJEES">
+            <div></div>
+        </div>
+        <div class="menu-item">
+            <label>Kababjees Lemon Can - RS 150:</label>
+            <input type="number" min="0" placeholder="Qty">
+            <button class="btn">Add to Cart</button>
+        </div>
+        <div class="left">
+            <img src="C:\Users\dell\Desktop\LME\1730537808-orange-drink.webp" alt="KABAABJEES">
+            <div></div>
+        </div>
+        <div class="menu-item">
+            <label>Kababjees Orange Can - RS 130:</label>
+            <input type="number" min="0" placeholder="Qty">
+            <button class="btn">Add to Cart</button>
+        </div>
+        <div class="left">
+            <img src="C:\Users\dell\Desktop\LME\1720174425-mneral-water.webp" alt="">
+            <div></div>
+        </div>
+        <div class="menu-item">
+            <label>Mineral Water - RS 90:</label>
+            <input type="number" min="0" placeholder="Qty">
+            <button class="btn">Add to Cart</button>
+        </div>
+        
+
+        <h2>Special Instructions</h2>
+        <textarea placeholder="Add your special instructions here..." rows="4" style="width: 100%; border-radius: 5px; padding: 10px; border: 2px solid #333;"></textarea>
+    </div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
